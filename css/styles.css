@@ -1,0 +1,204 @@
+:root {
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --brand-color-blue: #2196F3;
+    --brand-color-black: #000000;
+    --footer-contacts-color: rgba(255, 255, 255, 0.6);
+    --white-color: #FFFFFF;
+    --dark-background-color: #2F303A;
+    --light-background-color: #F5F4FA;
+    --frame-color: #ECECEC;
+    --button-hover-focus-color: #188CE8;
+    --main-font: Roboto, sans-serif;
+    --secondary-font: Raleway, sans-serif;
+}
+
+body {
+    color: var(--primary-text-color);
+    background-color: var(--white-color);
+    font-family: var(--main-font);
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+
+.list {
+    list-style: none;
+}
+
+.link,
+.logo,
+.portfolio-link {
+    text-decoration: none;
+}
+
+
+/* Colors */
+
+.benefits-title, .section-title, .title-portfolio, .team-title {
+    color: var(--title-text-color);
+}
+.hero-title {
+    color: var(--white-color);
+}
+.hero {
+    background-color: var(--dark-background-color);
+}
+.team {
+    background-color: var(--light-background-color);
+}
+.button {
+    color: var(--white-color);
+    background-color: var(--brand-color-blue);
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+.button:hover, button:focus {
+    background-color: var(--button-hover-focus-color);
+}
+.header>.logo {
+    color: var(--brand-color-black);
+}
+.footer>.logo {
+    color: var(--white-color);
+}
+.logo>.color {
+    color: var(--brand-color-blue);
+}
+.header-link {
+    color: var(--title-text-color);
+}
+.header-link-contacts {
+    color: inherit;
+}
+.footer {
+    background-color: var(--dark-background-color);
+}
+.map {
+    color: var(--white-color);
+}
+.mail, .phone {
+    color: var(--footer-contacts-color);
+}
+.link:focus, .link:hover, .link:active {
+    color: var(--brand-color-blue);
+}
+.active {
+    color: var(--brand-color-blue);
+}
+.item-button>.active {
+    color: var(--white-color);
+    background-color: var(--brand-color-blue);
+}
+.portfolio-button {
+    color: var(--title-text-color);
+    background-color: var(--light-background-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.portfolio-button:focus, .portfolio-button:hover, .portfolio-button:active {
+    color: var(--white-color);
+    background-color: var(--brand-color-blue);
+}
+.portfolio-link {
+    color: inherit;
+}
+
+
+/* Fonts */
+
+.logo {
+font-family: var(--secondary-font);
+font-weight: 700;
+font-size: 26px;
+line-height: 1.19;
+}
+.header-link, .header-link-contacts {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+.hero-title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+.button {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+}
+.benefits-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+.benefits-desc {
+    font-size: 14px;
+    line-height: 1.71;
+}
+.section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+.team-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+}
+.team-desc {
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+}
+.map, .mail, .phone {
+    font-style: normal;
+    line-height: 1.71;
+}
+.portfolio-button {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    text-align: center;
+}
+.title-portfolio {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+.desc-portfolio {
+    font-size: 16px;
+    line-height: 1.88;
+}
+
+/* Hide titles */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
