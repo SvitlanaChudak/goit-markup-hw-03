@@ -9,6 +9,7 @@
     --light-background-color: #F5F4FA;
     --frame-color: #ECECEC;
     --button-hover-focus-color: #188CE8;
+    --stroke-color: #EEEEEE;
     --main-font: Roboto, sans-serif;
     --secondary-font: Raleway, sans-serif;
 }
@@ -21,8 +22,71 @@ body {
     letter-spacing: 0.03em;
 }
 
+/* Block */
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .list {
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--frame-color);
+}
+
+.logo {
+    display: inline-block;
+    margin-top: 24px;
+    margin-bottom: 25px;
+    margin-right: 93px;
+}
+
+.header-nav {
+    margin-right: auto;
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-left: 93px;
+}
+
+.header-list,
+.header-list-contacts {
+    display: flex;
+    margin-left: auto;
+}
+
+.header-item {
+    margin-right: 50px;
+}
+
+.header-mail {
+    margin-right: 50px;
 }
 
 .link,
@@ -30,6 +94,150 @@ body {
 .portfolio-link {
     text-decoration: none;
 }
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+}
+
+.hero-title {
+    text-align: center;
+    width: 696px;
+    margin: 0 auto;
+}
+
+.button {
+    display: inline-block;
+    min-width: 200px;
+    min-height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 10px 32px;
+    text-align: center;
+}
+
+
+
+.benefits-list {
+    display: flex;
+    gap: 30px;
+}
+
+.benfits-item {
+    margin-right: 30px;
+    text-align: left;
+}
+
+.benfits-item:last-child {
+    margin-right: 0px;
+}
+        
+.benefits-title {
+    margin-bottom: 10px;
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.about {
+    padding-top: 0;
+    padding-bottom: 94px;
+}
+
+.about-list, .team-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-list:not(:last-child), .team-list:not(:last-child) {
+    margin-right: 30px;
+}
+
+.team-card {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+ .team-title {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.team-desc {
+    margin-top: 10px;
+} 
+
+.team-item {
+    max-width: 270px;
+    height: 368px;
+    background-color: var(--white-color);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.contatcs-address {
+    display: block;
+    margin-top: 20px;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.contacts-item:not(:last-child) {
+margin-bottom: 9px;
+}
+
+.list-btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.item-button:not(:last-child) {
+    margin-right: 8px;
+}
+
+.portfolio-button {
+    padding: 6px 22px;
+}
+
+.list-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+}
+
+
+.portfolio-card {
+    padding: 20px 24px;
+}
+
+.item-portfolio {
+    max-width: 370px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    flex-basis: calc(100%/3-30px);
+    border: 1px solid var(--stroke-color);
+}
+
+.title-portfolio {
+    margin-bottom: 4px;
+}
+
 
 
 /* Colors */
@@ -56,10 +264,10 @@ body {
 .button:hover, button:focus {
     background-color: var(--button-hover-focus-color);
 }
-.header>.logo {
+.header .logo {
     color: var(--brand-color-black);
 }
-.footer>.logo {
+.footer .logo {
     color: var(--white-color);
 }
 .logo>.color {
@@ -202,3 +410,5 @@ line-height: 1.19;
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+
