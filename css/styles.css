@@ -22,18 +22,17 @@ body {
     letter-spacing: 0.03em;
 }
 
-/* Block */
+/* ---------------RESET STYLES--------------- */
 
-.container {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+.link, .header-logo, .footer-logo {
+    text-decoration: none;
+    color: inherit;
 }
 
 .list {
     list-style: none;
-    padding-left: 0;
     margin: 0;
+    padding-left: 0;
 }
 
 h1,
@@ -44,6 +43,14 @@ h5,
 h6,
 p {
     margin: 0;
+}
+
+/* ---------------BASE STYLES--------------- */
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 img {
@@ -61,56 +68,13 @@ address {
     font-style: normal;
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
+.link:focus,
+.link:hover,
+.link:active {
+    color: var(--brand-color-blue);
 }
 
-.header {
-    border-bottom: 1px solid var(--frame-color);
-}
-
-.logo {
-    padding-top: 24px;
-    padding-bottom: 25px;
-    margin-right: 93px;
-}
-
-.header-nav {
-    display: flex;
-}
-
-.header-list {
-    display: flex;
-}
-.header-list-contacts {
-    display: flex;
-    margin-left: auto;
-}
-
-.header-item, .header-mail {
-    margin-right: 50px;
-}
-
-.link,
-.logo,
-.footer-logo,
-.portfolio-link {
-    text-decoration: none;
-}
-
-
-.hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    text-align: center;
-}
-
-.hero-title {
-    text-align: center;
-    width: 696px;
-    margin: 0 auto;
-}
+/* ---------------BUTTONS--------------- */
 
 .button {
     display: inline-block;
@@ -135,11 +99,160 @@ address {
     letter-spacing: 0.06em;
 }
 
+.button:hover,
+.button:focus {
+    background-color: var(--button-hover-focus-color);
+}
 
+.portfolio-button {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+    background-color: var(--light-background-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 6px 22px;
+}
+
+.list-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.item-button:not(:last-child) {
+    margin-right: 8px;
+}
+
+.item-button>.active {
+    color: var(--white-color);
+    background-color: var(--brand-color-blue);
+}
+
+.portfolio-button:focus,
+.portfolio-button:hover,
+.portfolio-button:active {
+    color: var(--white-color);
+    background-color: var(--brand-color-blue);
+}
+
+/* ---------------LOGO--------------- */
+
+.header-logo,
+.footer-logo {
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+}
+
+.header-logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+    color: var(--brand-color-black);
+}
+
+.footer-logo {
+    color: var(--white-color);
+}
+
+.header-logo>.color,
+.footer-logo>.color {
+    color: var(--brand-color-blue);
+}
+
+/* ---------------HEADER--------------- */
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    border-bottom: 1px solid var(--frame-color);
+}
+
+.header-link,
+.header-link-contacts {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.header-link {
+    color: var(--title-text-color);
+}
+
+.header-list {
+    display: flex;
+}
+
+.header-list-contacts {
+    display: flex;
+    margin-left: auto;
+}
+
+.header-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.header-mail {
+    margin-right: 50px;
+}
+
+.active {
+    color: var(--brand-color-blue);
+}
+
+/* ---------------HERO SECTION--------------- */
+
+.hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    background-color: var(--dark-background-color);
+}
+
+.hero-title {
+    text-align: center;
+    width: 696px;
+    margin: 0 auto;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+/* ---------------BENEFITS SECTION--------------- */
 
 .benefits-list {
     display: flex;
     gap: 30px;
+}
+
+.benefits-title,
+.section-title,
+.title-portfolio,
+.team-title {
+    color: var(--title-text-color);
+}
+
+.benefits-title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
 }
 
 .benfits-item {
@@ -150,13 +263,20 @@ address {
 .benfits-item:last-child {
     margin-right: 0px;
 }
-        
-.benefits-title {
-    margin-bottom: 10px;
+
+.benefits-desc {
+    font-size: 14px;
+    line-height: 1.71;
 }
+
+/* ---------------ABOUT SECTION--------------- */
 
 .section-title {
     margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
 }
 
 .about {
@@ -164,28 +284,22 @@ address {
     padding-bottom: 94px;
 }
 
-.about-list, .team-list {
+.about-list,
+.team-list {
     display: flex;
     justify-content: space-between;
 }
 
-.about-list:not(:last-child), .team-list:not(:last-child) {
+.about-list:not(:last-child),
+.team-list:not(:last-child) {
     margin-right: 30px;
 }
 
-.team-card {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
+/* ---------------TEAM SECTION--------------- */
 
- .team-title {
-    margin-bottom: 10px;
-    text-align: center;
+.team {
+    background-color: var(--light-background-color);
 }
-
-.team-desc {
-    margin-top: 10px;
-} 
 
 .team-item {
     max-width: 270px;
@@ -194,45 +308,34 @@ address {
     border-radius: 0px 0px 4px 4px;
 }
 
-.footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
+.team-card {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
-.contatcs-address {
-    margin-top: 20px;
+.team-title {
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
 }
 
-.contacts-item:not(:last-child) {
-margin-bottom: 9px;
+.team-desc {
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    margin-top: 10px;
 }
 
-.list-btn {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-.item-button:not(:last-child) {
-    margin-right: 8px;
-}
-
-.portfolio-button {
-    padding: 6px 22px;
-}
+/* ---------------PORTFOLIO SECTION--------------- */
 
 .list-portfolio {
     display: flex;
     flex-wrap: wrap;
     margin-right: -30px;
     margin-bottom: -30px;
-}
-
-
-.portfolio-card {
-    padding: 20px 24px;
-    border: 1px solid var(--stroke-color);
-    border-top: none;
 }
 
 .item-portfolio {
@@ -242,156 +345,62 @@ margin-bottom: 9px;
     flex-basis: calc(100%/3-30px);
 }
 
-.title-portfolio {
-    margin-bottom: 4px;
+.portfolio-card {
+    padding: 20px 24px;
+    border: 1px solid var(--stroke-color);
+    border-top: none;
 }
 
-
-
-/* Colors */
-
-.benefits-title, .section-title, .title-portfolio, .team-title {
-    color: var(--title-text-color);
-}
-.hero-title {
-    color: var(--white-color);
-}
-.hero {
-    background-color: var(--dark-background-color);
-}
-.team {
-    background-color: var(--light-background-color);
-}
-
-.button:hover, button:focus {
-    background-color: var(--button-hover-focus-color);
-}
-.header .logo {
-    color: var(--brand-color-black);
-}
-.footer-logo {
-    color: var(--white-color);
-}
-
-.logo>.color, .footer-logo>.color {
-    color: var(--brand-color-blue);
-}
-.header-link {
-    color: var(--title-text-color);
-}
-.header-link-contacts {
-    color: inherit;
-}
-.footer {
-    background-color: var(--dark-background-color);
-}
-.map {
-    color: var(--white-color);
-}
-.mail, .phone {
-    color: var(--footer-contacts-color);
-}
-.link:focus, .link:hover, .link:active {
-    color: var(--brand-color-blue);
-}
-.active {
-    color: var(--brand-color-blue);
-}
-.item-button>.active {
-    color: var(--white-color);
-    background-color: var(--brand-color-blue);
-}
-.portfolio-button {
-    color: var(--title-text-color);
-    background-color: var(--light-background-color);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.portfolio-button:focus, .portfolio-button:hover, .portfolio-button:active {
-    color: var(--white-color);
-    background-color: var(--brand-color-blue);
-}
-.portfolio-link {
-    color: inherit;
-}
-
-
-/* Fonts */
-
-.logo, .footer-logo {
-font-family: var(--secondary-font);
-font-weight: 700;
-font-size: 26px;
-line-height: 1.19;
-}
-
-.header-link, .header-link-contacts {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-}
-.hero-title {
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-}
-
-.benefits-title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-}
-.benefits-desc {
-    font-size: 14px;
-    line-height: 1.71;
-}
-.section-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-}
-.team-title {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
-    text-align: center;
-}
-.team-desc {
-    font-size: 16px;
-    line-height: 1.18;
-    text-align: center;
-}
-.map, .mail, .phone {
-    font-style: normal;
-    line-height: 1.71;
-}
-.portfolio-button {
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.63;
-    text-align: center;
-    letter-spacing: 0.03em;
-}
 .title-portfolio {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    margin-bottom: 4px;
 }
+
 .desc-portfolio {
     font-size: 16px;
     line-height: 1.88;
 }
 
-/* Hide titles */
+.portfolio-link:focus,
+.portfolio-link:hover,
+.portfolio-link:active {
+    color: inherit;
+}
+
+/* ---------------FOOTER--------------- */
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--dark-background-color);
+}
+
+.contatcs-address {
+    margin-top: 20px;
+}
+
+.contacts-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.contacts-link {
+    font-style: normal;
+    line-height: 1.71;
+}
+
+.map {
+    color: var(--white-color);
+}
+
+.mail,
+.phone {
+    color: var(--footer-contacts-color);
+}
+
+/* ---------------HIDE TITLES--------------- */
 
 .visually-hidden {
     position: absolute;
